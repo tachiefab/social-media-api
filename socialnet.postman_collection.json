@@ -1,0 +1,1151 @@
+{
+	"info": {
+		"_postman_id": "4d7c1a7f-0dfa-4fc6-a68a-74b73ecbad2b",
+		"name": "socialnet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "User Profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/tachiefab/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"tachiefab",
+										""
+									]
+								},
+								"description": "This does a GET request to the user detail endpoint"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User Profile",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjExOTcxMSwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMTk0MTF9.ucqCGrQ0dqu4myzlupKuUDc5XQG1fUD7FgohSJ5xR8k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "location",
+											"value": "Sankaase",
+											"type": "text"
+										},
+										{
+											"key": "bio",
+											"value": "A passionate software developer",
+											"type": "text"
+										},
+										{
+											"key": "profile_image",
+											"type": "file",
+											"src": "/C:/Users/fadil/Desktop/whatsapp images for project/IMG-20191226-WA0029.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/5/profile/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"5",
+										"profile",
+										""
+									]
+								},
+								"description": "This does a GET request to the user detail endpoint"
+							},
+							"response": []
+						},
+						{
+							"name": "Update User Profile Copy",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjExOTg4MCwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMTk1ODB9.Z3bCyMFKvgipBwYfFz6uSgG7MXmzHZ9AKETKfNNmA9s"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "location",
+											"value": "Sankaase tyy",
+											"type": "text"
+										},
+										{
+											"key": "bio",
+											"value": "A passionate software developer",
+											"type": "text"
+										},
+										{
+											"key": "profile_image",
+											"type": "file",
+											"src": "/C:/Users/fadil/Desktop/whatsapp images for project/IMG-20191226-WA0029.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/6/profile/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"6",
+										"profile",
+										""
+									]
+								},
+								"description": "This does a GET request to the user detail endpoint"
+							},
+							"response": []
+						},
+						{
+							"name": "User Profile With Parameters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/tachiefab/?posts_limit=5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"tachiefab",
+										""
+									],
+									"query": [
+										{
+											"key": "posts_limit",
+											"value": "5"
+										}
+									]
+								},
+								"description": "This does a GET request to the user detail endpoint"
+							},
+							"response": []
+						},
+						{
+							"name": "User Profile With all Parameters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/tachiefab/?posts_limit=5&followers_limit=10&followings_limit=15&friends_limit=20",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"tachiefab",
+										""
+									],
+									"query": [
+										{
+											"key": "posts_limit",
+											"value": "5"
+										},
+										{
+											"key": "followers_limit",
+											"value": "10"
+										},
+										{
+											"key": "followings_limit",
+											"value": "15"
+										},
+										{
+											"key": "friends_limit",
+											"value": "20"
+										}
+									]
+								},
+								"description": "This does a GET request to the user detail endpoint"
+							},
+							"response": []
+						},
+						{
+							"name": "Users posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/tachiefab/posts/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"tachiefab",
+										"posts",
+										""
+									]
+								},
+								"description": "This does a GET request to the user detail endpoint"
+							},
+							"response": []
+						},
+						{
+							"name": "Follow User",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjExMTkwOCwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMTE2MDh9.XWwEn-vaAwjvHiqG9XkZ1eo-fGdx1-LBf6FOeFBTzU4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/tachiefab/follow/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"tachiefab",
+										"follow",
+										""
+									]
+								},
+								"description": "This does a GET request to the user detail endpoint"
+							},
+							"response": []
+						},
+						{
+							"name": "Friend User",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjExMTkwOCwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMTE2MDh9.XWwEn-vaAwjvHiqG9XkZ1eo-fGdx1-LBf6FOeFBTzU4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/tachiefab/friend/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"tachiefab",
+										"friend",
+										""
+									]
+								},
+								"description": "This does a GET request to the user detail endpoint"
+							},
+							"response": []
+						},
+						{
+							"name": "User Followers",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjExMTkwOCwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMTE2MDh9.XWwEn-vaAwjvHiqG9XkZ1eo-fGdx1-LBf6FOeFBTzU4",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/tachiefab/followers/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"tachiefab",
+										"followers",
+										""
+									]
+								},
+								"description": "This does a GET request to the user detail endpoint"
+							},
+							"response": []
+						},
+						{
+							"name": "User Followings",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjExMTkwOCwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMTE2MDh9.XWwEn-vaAwjvHiqG9XkZ1eo-fGdx1-LBf6FOeFBTzU4",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/tachiefab/followings/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"tachiefab",
+										"followings",
+										""
+									]
+								},
+								"description": "This does a GET request to the user detail endpoint"
+							},
+							"response": []
+						},
+						{
+							"name": "User Friends",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjExMTkwOCwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMTE2MDh9.XWwEn-vaAwjvHiqG9XkZ1eo-fGdx1-LBf6FOeFBTzU4",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/tachiefab/friends/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"tachiefab",
+										"friends",
+										""
+									]
+								},
+								"description": "This does a GET request to the user detail endpoint"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "25ad3fa6-492c-42e2-bfa8-598940c57813",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0ffcf02-baaa-4f36-9f04-7980f6a36109",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Obtain Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "tachiefab",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@blues4974",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								""
+							]
+						},
+						"description": "To login or obtain token for authorization"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtain Token(Another Endpoint)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "tachiefab",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@blues4974",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								""
+							]
+						},
+						"description": "To login or obtain token for authorization"
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjExMDk2MSwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMTA2NjF9.dTMj_t9cXGLMt_OsE6TZ-X_EmriFbVRjlJUXBr_Kx7k",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@blues4974",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/jwt/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"jwt",
+								"refresh",
+								""
+							]
+						},
+						"description": "To login or obtain token for authorization"
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "kwame",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tachiefab333@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@blues4974",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "@blues4974",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register",
+								""
+							]
+						},
+						"description": "To login or obtain token for authorization"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "Comment List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								""
+							]
+						},
+						"description": "List all comments in the system"
+					},
+					"response": []
+				},
+				{
+					"name": "Comment Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments/13/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								"13",
+								""
+							]
+						},
+						"description": "List all comments in the system"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Comment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjExMzg5MCwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMTM1OTB9.gokQ2_SW2hNb4dzLHdWNe0YRZ163EO4i71EgYhlTVKw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "I love you very much. goooooooooooooooo",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "post",
+									"type": "text"
+								},
+								{
+									"key": "obj_id",
+									"value": "25",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								"create",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "List all comments in the system"
+					},
+					"response": []
+				},
+				{
+					"name": "Comment Reply",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjExMzg5MCwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMTM1OTB9.gokQ2_SW2hNb4dzLHdWNe0YRZ163EO4i71EgYhlTVKw"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "I love you very much. goooooooooooooooo",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "post",
+									"type": "text"
+								},
+								{
+									"key": "obj_id",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "parent_id",
+									"value": "13",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								"create",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "List all comments in the system"
+					},
+					"response": []
+				},
+				{
+					"name": "Posts Object Comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments/?obj_id=23&type=post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								""
+							],
+							"query": [
+								{
+									"key": "obj_id",
+									"value": "23"
+								},
+								{
+									"key": "type",
+									"value": "post"
+								}
+							]
+						},
+						"description": "List all comments in the system"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "List All Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						},
+						"description": "List all posts in the system"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjEyMDM1MSwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMjAwNTF9.cmTt2TSojBwCrmgJaAECt2KrZYWwcsAZH5Aax790l-M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "Testing if post works",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/fadil/Desktop/whatsapp images for project/IMG-20181231-WA0000.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						},
+						"description": "List all posts in the system"
+					},
+					"response": []
+				},
+				{
+					"name": "Repost a Post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjEyMDM1MSwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMjAwNTF9.cmTt2TSojBwCrmgJaAECt2KrZYWwcsAZH5Aax790l-M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "Testing if post works repost",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/fadil/Desktop/whatsapp images for project/IMG-20181231-WA0000.jpg"
+								},
+								{
+									"key": "parent_id",
+									"value": "23",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						},
+						"description": "List all posts in the system"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjEyMDM1MSwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMjAwNTF9.cmTt2TSojBwCrmgJaAECt2KrZYWwcsAZH5Aax790l-M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "Testing if post works",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/fadil/Desktop/whatsapp images for project/IMG-20181231-WA0000.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/23/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"23",
+								""
+							]
+						},
+						"description": "List all posts in the system"
+					},
+					"response": []
+				},
+				{
+					"name": "Post Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/29/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"29",
+								""
+							]
+						},
+						"description": "List all posts in the system"
+					},
+					"response": []
+				},
+				{
+					"name": "Like a Post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjExNDkyMSwiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMTQ2MjF9.WNVrzcHI4Z1avlw9c-a_ZGuuln6vX7YyKrZ-ll9tgD4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/posts/29/like/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"posts",
+								"29",
+								"like",
+								""
+							]
+						},
+						"description": "List all posts in the system"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InRhY2hpZWZhYiIsImV4cCI6MTU5MjEwODU4MywiZW1haWwiOiJ0YWNoaWVmYWIzMTFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE1OTIxMDgyODN9.b9l9deLbhl1_6PTcbv1klvlXwz04pxEVDHeoEmUNF_Q",
+				"type": "string"
+			}
+		]
+	},
+	"protocolProfileBehavior": {}
+}
